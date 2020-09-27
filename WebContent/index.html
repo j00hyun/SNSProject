@@ -18,22 +18,11 @@ textarea {
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 </style>
 <body class="w3-theme-l5">
-
-<!-- Navbar -->
+<!-- Top Column -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-ide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="window.location.reload()"><i class="fa fa-bars"></i></a>
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>EncoreBook</a>
-  <a href="sign_up.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    Sign Up
-  </a>
-    <!-- 비동기 로그 (log_state.jsp) -->
-    <div id="log_state">
-      <a href="log_in.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-        Log In
-      </a>
-    </div>
- </div>
+  <!-- Navbar -->
+  <!-- 비동기 네비게이션 바 (nav_bar.jsp) -->
+  <div id="nav_bar"></div>
 </div>
 
 <!-- Page Container -->
@@ -81,7 +70,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
 <br>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="getAllContent.js"></script>
+<script src="javascript/getAllFeed.js"></script>
+<script src="javascript/getMyProfile.js"></script>
+<script src="javascript/getNavBar.js"></script>
 
 </body>
 </html> 

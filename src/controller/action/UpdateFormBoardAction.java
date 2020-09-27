@@ -25,11 +25,11 @@ public class UpdateFormBoardAction implements Action {
 			}else{
 				gContent.setContent(gContent.getContent().replaceAll("<br/>", "\n"));
 				request.setAttribute("resultContent", gContent);
-				url = "update.jsp";
+				url = "jsp/update.jsp";
 			}
 		}catch (Exception e) {
 			request.setAttribute("errorMsg", e.getMessage());
-			url = "error.jsp";
+			url = "jsp/error.jsp";
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 	}

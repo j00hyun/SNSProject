@@ -34,7 +34,7 @@ public class DeleteFeedAction implements Action{
 		}catch (Exception e){
 			request.setAttribute("errorMsg", e.getMessage());
 		}
-		request.getRequestDispatcher("error.jsp").forward(request, response);
+		request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
 	}
 	
 }

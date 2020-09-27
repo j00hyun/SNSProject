@@ -14,7 +14,7 @@ import model.feed.FeedDAO;
 public class UpdateLikeAction implements Action {
 
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "error.jsp";
+		String url = "jsp/error.jsp";
 		String strNum = request.getParameter("feedNo");
 
 		try {
@@ -28,7 +28,7 @@ public class UpdateLikeAction implements Action {
 				throw new Exception("Feed가 존재하지 않습니다.");
 			} else {
 				request.setAttribute("list", feed);
-				url = "feed.jsp";
+				url = "jsp/feed.jsp";
 			}
 		} catch (SQLException e) {
 			request.setAttribute("errorMsg", e.getMessage());

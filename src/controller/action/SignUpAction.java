@@ -37,10 +37,10 @@ public class SignUpAction implements Action {
 			}
 		}catch (SQLException e) {
 			request.setAttribute("errorMsg", e.getMessage());
-			request.getRequestDispatcher("error.jsp").forward(request, response);
+			request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
 		}catch (Exception e) {
 			request.setAttribute("errorMsg", e.getMessage());
-			request.getRequestDispatcher("error.jsp").forward(request, response);
+			request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
 		}
 		
 		

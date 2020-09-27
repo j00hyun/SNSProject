@@ -5,7 +5,6 @@ import controller.action.AllViewFeedAction;
 import controller.action.DeleteFeedAction;
 import controller.action.LoginAction;
 import controller.action.LogoutAction;
-import controller.action.UpdateFormBoardAction;
 import controller.action.UpdateLikeAction;
 import controller.action.WriteFeedAction;
 import controller.action.SignUpAction;

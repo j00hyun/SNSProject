@@ -16,28 +16,29 @@ textarea {
   height: 100px;
 }
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
+w3-input{
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #ccc;
+  width:100%
+}
+
 </style>
 <body class="w3-theme-l5">
 
 <!-- Navbar -->
 <div class="w3-top">
- <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="window.location.reload()"><i class="fa fa-bars"></i></a>
-  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>EncoreBook</a>
-  <a href="sign_up.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    Sign Up
-  </a>
-  <a href="log_in.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    Log In
-  </a>
- </div>
+  <!-- Navbar -->
+  <!-- 비동기 네비게이션 바 (nav_bar.jsp) -->
+  <div id="nav_bar"></div>
 </div>
 
 <!-- Page Container -->
-<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">
   <!-- The Grid -->
   <div class="w3-row">
-    
+
     <!-- Middle Column -->
     <div id="js_middle" class="w3-col m9">
 
@@ -52,35 +53,37 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
                   <!-- action : board, command : logIn, parameter : id, password -->
                   <form type="logInForm" method="post" action="feed" onSubmit='return checkValid()'>
                     <input type="hidden" name="command" value="login">
+                    <p>
+                      <input required class="w3-input" name="id" type="text" style="width:90%" required>
+                      <label>ID</label>
+                    </p>
+                    <p>
+                      <input required class="w3-input" name="password" type="password" style="width:90%" required>
+                      <label>Password</label>
+                    </p>
 
-                    <label>아이디&emsp;&emsp;&emsp;</label>
-                    <input required type="text" name="id" placeholder="id" class="w3-border w3-padding">
-                    <p></p>
-
-                    <label>비밀번호&emsp;&emsp;</label>
-                    <input required type="password" name="password" placeholder="password" class="w3-border w3-padding">
-                    <p></p>
-                
-                    <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Log In</button>   
+                    <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Log In</button>
+                    <button type="button" class="w3-button w3-theme" onclick="location.href='sign_up.html'"><i class="fa fa-pencil"></i>  Sign Up</button>
                   </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      <div>
+      </div>
 
     <!-- End Middle Column -->
     </div>
-  
+
     </div>
   </div>
-  
+
 <!-- End Page Container -->
 </div>
 <br>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="javascript/getNavBar.js"></script>
 
 </body>
 </html> 

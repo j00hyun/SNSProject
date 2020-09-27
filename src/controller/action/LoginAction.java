@@ -17,7 +17,7 @@ public class LoginAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String id = request.getParameter("id");
 	    String password = request.getParameter("password");
-	    String url = "error.jsp";
+	    String url = "jsp/error.jsp";
 	    
 	    try {
 			Member member = MemberDAO.getMember(id);

@@ -13,12 +13,12 @@ import model.feed.FeedDAO;
 public class AllViewFeedAction implements Action {
  
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "error.jsp";
+		String url = "jsp/error.jsp";
 		
 		try {
 			request.setAttribute("list", FeedDAO.getAllFeed());
 			System.out.println("ActionFactory-list요청받음.Allview : "+FeedDAO.getAllFeed().size());
-			url = "list.jsp";
+			url = "jsp/all_feed.jsp";
 		} catch (SQLException e) {
 			request.setAttribute("errorMsg", e.getMessage());
 			System.out.println("Allview페이지 에러임.");
